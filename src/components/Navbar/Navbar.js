@@ -1,32 +1,26 @@
-import { Typography, Grid, Stack } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Typography, Grid } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import MenuIcon from '@mui/icons-material/Menu';
 import useStyles from './styles';
+import theme from '../../helpers/ThemeProvider'
 
 const Navbar = () => {
     
     const classes = useStyles();
-
-    const theme = createTheme({
-        typography: {
-            fontFamily: 'Italiana, serif'
-        }
-    }); 
-    
+   
     return (
-        <Grid container>
-            <ThemeProvider theme={theme}>
-            <Grid item>
-                <Typography className={classes.title} color='white' variant='h5'>
-                    bäche
-                </Typography>
+        <ThemeProvider theme={theme}>
+            <Grid container className={classes.grid}>
+                <Grid item>
+                    <Typography className={classes.title} color='#eeeef0' variant='h4'>
+                        bäche
+                    </Typography>
+                </Grid>
+                <Grid item>
+                    <MenuIcon htmlColor='#eeeef0' fontSize='large'/>
+                </Grid>
             </Grid>
-            <Grid item>
-                <Stack>
-
-                </Stack>
-            </Grid>
-            </ThemeProvider>
-        </Grid>
+        </ThemeProvider>
     )
 }
 
