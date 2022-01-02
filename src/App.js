@@ -1,25 +1,44 @@
-import { Box, CssBaseline } from '@mui/material';
+import { Box, CssBaseline, Collapse } from '@mui/material';
+import { useEffect, useState } from 'react';
 import backie from './images/brooks.jpg';
-import useStyles from './styles';
 import Navbar from './components/Navbar/Navbar';
-/*import Body from './components/Body/Body';
-import Footer from './components/Footer/Footer'; */
+import Body from './components/Body/Body';
+/* import Footer from './components/Footer/Footer'; */
 
 function App() {
 
-  const classes = useStyles();
+    const [checked, setChecked] = useState(false);
+  
+    useEffect(() => {
+      debugger
+      setChecked(true);
+    }, []);
 
   return (
-    <Box className={classes.main} sx={{
-      backgroundImage: `url(${backie})`,
-      backgroundSize: 'cover',
-      height: '100vh',
-      backgroundRepeat: 'no-repeat'
-    }}>
-      <CssBaseline />
-      <Navbar />
-      {/* <Body />
-      <Footer /> */}
+    <Box sx={{position: 'relative', overflow: 'hidden', backgroundColor: '#445756'}} >
+      <Box sx={{
+        position: 'inherit',
+        backgroundImage: `url(${backie})`,
+        backgroundSize: 'cover',
+        height: '105vh',
+        backgroundRepeat: 'no-repeat',
+        /* transition: 'height 3s',
+        '&:hover': {
+          height: '100vh'
+        } */
+      }}> 
+        <CssBaseline />
+        <Collapse
+        in={checked}
+        {...(checked ? { timeout: 1000 } : {})}
+        collapsedHeight={50}
+      >
+        <Navbar />
+        </Collapse>
+        <Body />
+        {/* <Footer /> */}
+      </Box>
+      
     </Box>
   );
 }
