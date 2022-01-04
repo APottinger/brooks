@@ -1,13 +1,16 @@
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
-    title: {
-        letterSpacing: '1rem'
-    },
     grid: {
-        paddingTop: '2rem',
+        paddingTop: '3rem',
+        paddingLeft: '7rem',
+        width: 'calc(100% + 40px)',
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'flex-start'
+    },
+    title: {
+        position: 'sticky',
+        letterSpacing: '1rem',
     }
 })
 
