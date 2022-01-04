@@ -1,32 +1,36 @@
 import { Typography, ThemeProvider } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import theme from '../../helpers/ThemeProvider';
-import BodyNav from './BodyNav';
 
 const Body = () => {
     
     const useStyles = makeStyles({
         title: {
-            width: '50%',
-            height: '50vh',
-            paddingLeft: '10rem',
+            margin: 0,
+            position: 'relative',
+            letterSpacing: '0.25rem',
+            top: '19rem',
+            left: '16rem',
+            width: '100vw',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
         }
     });
     
     const classes = useStyles()
 
     return (
-        <div>
+        
             <ThemeProvider theme={theme}>
-                <Typography className={classes.title} variant='h5' color='#A19072'>
-                    If you don't have money, you can't eat here. Don't worry, you're still loved by someone just not us
+                <Typography className={classes.title} variant='h5' color='#b59c82'>
+                    {/* quotes to be used: If you don't have money, you can't eat here. Don't worry, you're still loved by someone - just not us 
+                    you get what you pay for so bring a ton of money 
+                    we open when we open*/}
+                    513 Lux Avenue - <em>Berlin, Germany</em>
                 </Typography>
             </ThemeProvider>
-            <BodyNav />
-        </div>
+    
     )
 }
 
