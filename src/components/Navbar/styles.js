@@ -4,7 +4,7 @@ const useStyles = makeStyles({
     grid: {
         paddingTop: '3rem',
         paddingLeft: '7rem',
-        width: 'calc(100% + 40px)',
+        width: 'calc(100% + 80px)',
         display: 'flex',
         justifyContent: 'flex-start'
     },
