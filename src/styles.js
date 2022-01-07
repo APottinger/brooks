@@ -9,11 +9,11 @@ const useStyles = makeStyles({
     },
     boxItem: {
         position: 'inherit',
-        right: '40px',
+        right: '25px',
         backgroundImage: `url(${backie})`,
         backgroundSize: 'cover',
         height: '100vh',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
     }
 });
 
