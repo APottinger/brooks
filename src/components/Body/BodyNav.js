@@ -2,13 +2,14 @@ import { Typography, ThemeProvider, Grid } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import theme from '../../helpers/ThemeProvider';
 
+
 const BodyNav = () => {
 
     const useStyles = makeStyles({
         grid: {
             height: '70vh',
             display: 'flex',
-            paddingLeft: '50px',
+            paddingLeft: '80px',
             justifyContent: 'center',
             alignItems: 'center'
         },
