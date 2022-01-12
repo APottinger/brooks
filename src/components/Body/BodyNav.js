@@ -1,28 +1,9 @@
 import { Typography, ThemeProvider, Grid } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import useStyles from './styles';
 import theme from '../../helpers/ThemeProvider';
-
+import { Link } from 'react-router-dom';
 
 const BodyNav = () => {
-
-    const useStyles = makeStyles({
-        grid: {
-            height: '70vh',
-            display: 'flex',
-            paddingLeft: '80px',
-            justifyContent: 'center',
-            alignItems: 'center'
-        },
-        gridItem: {
-            fontSize: '10rem',
-            padding: '2rem',
-            cursor: 'pointer',
-            transition: '1s ease',
-            '&:hover': {
-                color: '#b59c82'
-            }
-        }
-    });
 
     const classes = useStyles();
 
@@ -33,8 +14,8 @@ const BodyNav = () => {
                     {['EAT', 'DRINK', 'VISIT'].map(item => (
                         <Grid item key={item}>
                             <Typography className={classes.gridItem} variant='h1' color='#eeeef0'>
-                                {item}
-                            </Typography>
+                                <Link to='/eat'>{item}</Link>
+                            </Typography>  
                         </Grid>
                     ))}
                 </Grid>
