@@ -1,25 +1,16 @@
-import { Box, CssBaseline } from '@mui/material';
-import Navbar from './components/Navbar/Navbar';
-import BodyAddress from './components/Body/BodyAddress';
-import BodyNav from './components/Body/BodyNav';
-/* import Footer from './components/Footer/Footer'; */
-import useStyles from './styles';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Eat from './pages/Eat';
 
 function App() {
 
-    const classes = useStyles();
-
   return (
-  
-      <Box className={classes.box}>
-      <CssBaseline />
-        <Box className={classes.boxItem}>
-          <Navbar />
-          <BodyAddress />
-          <BodyNav />
-        </Box>
-      </Box>
-
+    <>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/eat' element={<Eat />} />
+      </Routes>
+    </>
   );
 }
 
