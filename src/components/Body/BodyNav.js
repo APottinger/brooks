@@ -14,7 +14,7 @@ const BodyNav = () => {
                     {['EAT', 'DRINK', 'VISIT'].map(item => (
                         <Grid item key={item}>
                             <Typography className={classes.gridItem} variant='h1' color='#eeeef0'>
-                                <Link to='/eat'>{item}</Link>
+                                <Link className={classes.link} to='/eat'>{item}</Link>
                             </Typography>  
                         </Grid>
                     ))}
