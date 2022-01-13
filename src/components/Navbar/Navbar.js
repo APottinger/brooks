@@ -2,7 +2,8 @@ import { Typography, Grid, Collapse } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import useStyles from './styles';
-import theme from '../../helpers/ThemeProvider'
+import theme from '../../helpers/ThemeProvider';
+import Drawer from './Drawer';
 
 const Navbar = () => {
     
@@ -26,7 +27,9 @@ const Navbar = () => {
                             bäche
                         </Typography>
                     </Grid>
-                    
+                    <Grid item>
+                        <Drawer />
+                    </Grid>
                 </Grid>
             </ThemeProvider>
         </Collapse>
