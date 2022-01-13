@@ -16,6 +16,10 @@ const useStyles = makeStyles({
         '&:hover': {
             color: '#b59c82'
         }
+    },
+    link : {
+        textDecoration: 'none',
+        color: 'inherit'
     }
 });
 
